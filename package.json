@@ -1,0 +1,23 @@
+{
+  "name": "file-switch",
+  "version": "1.0.0",
+  "description": "Switches files based on a given key.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "file",
+    "switch",
+    "environment",
+    "config",
+    "configuration",
+    "conf"
+  ],
+  "author": "Curtis Kaler <ckaler@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LionFree/file-switch"
+  }
+}
