@@ -2,9 +2,13 @@
   "name": "file-switch",
   "version": "1.0.0",
   "description": "Switches files based on a given key.",
+  "author": "Curtis Kaler <curt.kaler@gmail.com>",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "bundle": "rollup --config ./rollup.config.js",
+    "lint": "jshint ./src/ && eslint ./src/",
+    "test": "npm run lint && npm run test-js",
+    "test-js": "nyc jasmine %CD%/spec/tests.spec.js"
   },
   "keywords": [
     "file",
@@ -14,10 +18,45 @@
     "configuration",
     "conf"
   ],
-  "author": "Curtis Kaler <ckaler@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LionFree/file-switch"
+  },
+  "files": [
+    "index.js",
+    "LICENSE",
+    "readme.md",
+    "package.json"
+  ],
+  "devDependencies": {
+    "ajv": "^6.5.3",
+    "coveralls": "^3.0.2",
+    "jasmine": "^3.2.0",
+    "eslint": "^5.5.0",
+    "eslint-plugin-jasmine": "^2.10.1",
+    "jshint": "^2.9.6",
+    "nyc": "^13.0.1",
+    "rollup": "^0.65.2",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.4.0"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "per-file": true,
+    "lines": 99,
+    "statements": 99,
+    "functions": 99,
+    "branches": 99,
+    "exclude": [
+      "**/spec/**",
+      "node_modules"
+    ],
+    "reporter": [
+      "html",
+      "lcov",
+      "text-summary"
+    ]
   }
 }

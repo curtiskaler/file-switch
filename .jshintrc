@@ -1,0 +1,11 @@
+{
+  "laxcomma": true,
+  "laxbreak": true,
+  "curly": true,
+  "-W058": true,
+  "eqeqeq": false,
+  "node": true,
+  "validthis": true,
+  "esversion": 6,
+  "jasmine": true
+}
