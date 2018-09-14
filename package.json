@@ -5,9 +5,9 @@
   "author": "Curtis Kaler <curt.kaler@gmail.com>",
   "main": "index.js",
   "scripts": {
-    "lint": "jshint ./lib/ && eslint ./lib/",
+    "lint": "jshint ./lib/ && eslint ./lib/ --fix",
     "test": "npm run lint && npm run test-js",
-    "test-js": "nyc jasmine --config=spec/support/jasmine.json"
+    "test-js": "nyc jasmine --config=./spec/support/jasmine.json"
   },
   "keywords": [
     "file",
@@ -31,8 +31,8 @@
     "lib/debug-helper.js",
     "lib/file-copier.js",
     "lib/logger.js",
-    "lib/path-resolver.js",
-    "lib/use-file.js"
+    "lib/main.js",
+    "lib/path-resolver.js"
   ],
   "devDependencies": {
     "ajv": "^6.5.3",
