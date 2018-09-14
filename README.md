@@ -45,7 +45,7 @@ const switchFile = require('switch-file');
 
 const isProd = (process.env.NODE_ENV === 'production');
 
-let envConfig = {
+let options = {
     sources: [
         { key: 'dev',  path: 'src/environments/environment-dev.ts'  },
         { key: 'prod', path: 'src/environments/environment-prod.ts' }
@@ -55,17 +55,17 @@ let envConfig = {
     }
 };
 
-switchFile(envConfig).useFile(isProd ? 'prod' : 'dev');
+new switchFile(options).useFile(isProd ? 'prod' : 'dev');
 
 ```
 
 ## <a name="api"></a>API
 
 ### `useFile(key)` → `path`
-Copies the source file with the given key to the destination path specified in the `envConfig`, and returns the path of the file with the given key.
+Copies the source file with the given key to the destination path specified in the `options`, and returns the path of the file with the given key.
 
 
-## <a name="config"></a>Config Options
+## <a name="config"></a>Configuration Options
 
 ```json
 {

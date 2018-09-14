@@ -1,7 +1,7 @@
 const MainModule = require('./lib/main.js');
 
-module.exports = function (config) {
+module.exports = function (options) {
   return {
-    useFile: new MainModule(config).useFile
+    useFile: new MainModule(options).useFile
   };
 };
