@@ -33,6 +33,7 @@
     "package.json",
     "lib/config-reader.js",
     "lib/debug-helper.js",
+    "lib/error-handler.js",
     "lib/file-copier.js",
     "lib/logger.js",
     "lib/main.js",

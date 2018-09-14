@@ -1,7 +1,14 @@
-const MainModule = require('./lib/main.js');
 
-module.exports = function (options) {
-  return {
-    useFile: new MainModule(options).useFile
-  };
-};
+const MainModule = require('./lib/main');
+const errors = require('./lib/error-handler');
+
+function FileSwitch(options) {
+  if (!options) {
+    errors.optionsNotSpecified();
+  }
+  this.options = options;
+}
+
+FileSwitch.prototype.useFile = MainModule.useFile;
+
+module.exports = FileSwitch;
