@@ -48,7 +48,7 @@ const switchFile = require('switch-file');
 
 const isProd = (process.env.NODE_ENV === 'production');
 
-let options = {
+const options = {
     sources: [
         { key: 'dev',  path: 'src/environments/environment-dev.ts'  },
         { key: 'prod', path: 'src/environments/environment-prod.ts' }
@@ -70,8 +70,8 @@ Copies the source file with the given key to the destination path specified in t
 
 ## <a name="config"></a>Configuration Options
 
-```json
-{
+```js
+const options = {
 	// (optional) - the absolute or relative location of the root folder of the project
 	root: '../../..',
 	
