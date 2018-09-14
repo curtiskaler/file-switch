@@ -1,6 +1,6 @@
 {
   "name": "file-switch",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Switches files based on a given key.",
   "author": "Curtis Kaler <curt.kaler@gmail.com>",
   "main": "index.js",
