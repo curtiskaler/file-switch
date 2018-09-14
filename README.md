@@ -5,7 +5,6 @@ Switches files based on a given key.
 [![Build Status](https://travis-ci.org/curtiskaler/file-switch.svg?branch=master)](https://travis-ci.org/curtiskaler/file-switch)
 [![Coverage Status](https://coveralls.io/repos/curtiskaler/file-switch/badge.svg?branch=master&service=github)](https://coveralls.io/github/curtiskaler/file-switch?branch=master)
 [![npm](https://img.shields.io/npm/v/file-switch.svg)](https://www.npmjs.com/package/file-switch) 
-[![npm downloads](https://img.shields.io/npm/dm/file-switch.svg)](https://www.npmjs.com/package/file-switch) 
 
 
 ## <a name="purpose"></a>Purpose
