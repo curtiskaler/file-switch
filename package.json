@@ -5,10 +5,9 @@
   "author": "Curtis Kaler <curt.kaler@gmail.com>",
   "main": "index.js",
   "scripts": {
-    "bundle": "rollup --config ./rollup.config.js",
-    "lint": "jshint ./src/ && eslint ./src/",
+    "lint": "jshint ./lib/ && eslint ./lib/",
     "test": "npm run lint && npm run test-js",
-    "test-js": "nyc jasmine %CD%/spec/tests.spec.js"
+    "test-js": "nyc jasmine --config=spec/support/jasmine.json"
   },
   "keywords": [
     "file",
@@ -27,29 +26,32 @@
     "index.js",
     "LICENSE",
     "readme.md",
-    "package.json"
+    "package.json",
+    "lib/config-reader.js",
+    "lib/debug-helper.js",
+    "lib/file-copier.js",
+    "lib/logger.js",
+    "lib/path-resolver.js",
+    "lib/use-file.js"
   ],
   "devDependencies": {
     "ajv": "^6.5.3",
     "coveralls": "^3.0.2",
-    "jasmine": "^3.2.0",
     "eslint": "^5.5.0",
     "eslint-plugin-jasmine": "^2.10.1",
+    "jasmine": "^3.2.0",
     "jshint": "^2.9.6",
-    "nyc": "^13.0.1",
-    "rollup": "^0.65.2",
-    "rollup-plugin-node-resolve": "^3.4.0",
-    "rollup-plugin-node-builtins": "^2.1.2",
-    "rollup-plugin-node-globals": "^1.4.0"
+    "nyc": "^13.0.1"
   },
   "nyc": {
     "check-coverage": true,
     "per-file": true,
-    "lines": 99,
-    "statements": 99,
-    "functions": 99,
-    "branches": 99,
+    "lines": 95,
+    "statements": 95,
+    "functions": 95,
+    "branches": 95,
     "exclude": [
+      "**/*.spec.js",
       "**/spec/**",
       "node_modules"
     ],
