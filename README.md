@@ -45,7 +45,7 @@ npm install file-switch --save-dev
 In your build script (or `webpack.config.js`), you might use the following:
 
 ```js
-const switchFile = require('switch-file');
+const FileSwitch = require('file-switch');
 
 const isProd = (process.env.NODE_ENV === 'production');
 
@@ -59,7 +59,7 @@ const options = {
     }
 };
 
-new switchFile(options).useFile(isProd ? 'prod' : 'dev');
+new FileSwitch(options).useFile(isProd ? 'prod' : 'dev')
 
 ```
 
@@ -88,7 +88,7 @@ const options = {
 			// (optional) - the display name to use in the console output 
 			displayName: 'DEVELOPMENT', 
 
-			// the path where this file resides
+			// the path where this source file resides
 			path: 'src/environments/environment-dev.ts'  
 		},
 	    { key: 'prod', displayName: 'PRODUCTION',  path: 'src/environments/environment-prod.ts' }
