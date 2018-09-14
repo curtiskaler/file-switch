@@ -5,10 +5,13 @@
   "author": "Curtis Kaler <curt.kaler@gmail.com>",
   "main": "index.js",
   "scripts": {
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "lint": "jshint ./lib/ && eslint ./lib/ --fix",
+    "postpublish": "git push origin --all; git push origin --tags",
+    "postversion": "npm publish",
+    "preversion": "npm test",
     "test": "npm run lint && npm run test-js && npm run coverage",
-    "test-js": "nyc jasmine --config=./spec/support/jasmine.json",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "test-js": "nyc jasmine --config=./spec/support/jasmine.json"
   },
   "keywords": [
     "file",

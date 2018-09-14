@@ -10,7 +10,9 @@ Switches files based on a given key.
 
 ## <a name="purpose"></a>Purpose
 
-Suppose your final, bundled application uses variables in `environment.ts`, but those variables might change depending on whether you're in a development environment, or production. So you have want to keep a few different files around and swap them in and out depending on whether you're running in `dev` or `prod`.  
+Suppose your final, bundled application uses variables in `environment.ts`, but those variables might change depending on whether the environment you're working on is development or production. 
+
+So you want to keep a few different files around (e.g., `environment-dev.ts` and `environment-prod.ts`) and swap them in and out depending on whether you're running in `dev` or `prod`.  
 
 You might have a folder structure like this:
 ```
@@ -30,7 +32,7 @@ project
 │           environment-prod.ts
 ```
 
-In this case, you need to copy the appropriate `environment-***.ts` file into the `src/app/config` folder, and name it `environment.ts`.
+In this case, you want to copy the appropriate `environment-***.ts` file into the `src/app/config` folder, and name it `environment.ts`.
 
 
 ## Install
