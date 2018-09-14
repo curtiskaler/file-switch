@@ -2,7 +2,10 @@
 Switches files based on a given key.
 
 
-[comment]: <> ( [![Build Status](https://travis-ci.org/curtiskaler/file-switch.svg?branch=master)](https://travis-ci.org/curtiskaler/file-switch) [![npm](https://img.shields.io/npm/v/file-switch.svg)](https://www.npmjs.com/package/file-switch) [![npm downloads](https://img.shields.io/npm/dm/file-switch.svg)](https://www.npmjs.com/package/ajv) [![Coverage Status](https://coveralls.io/repos/curtiskaler/file-switch/badge.svg?branch=master&service=github)](https://coveralls.io/github/curtiskaler/file-switch?branch=master) [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/) )
+[![Build Status](https://travis-ci.org/curtiskaler/file-switch.svg?branch=master)](https://travis-ci.org/curtiskaler/file-switch)
+[![Coverage Status](https://coveralls.io/repos/curtiskaler/file-switch/badge.svg?branch=master&service=github)](https://coveralls.io/github/curtiskaler/file-switch?branch=master)
+[![npm](https://img.shields.io/npm/v/file-switch.svg)](https://www.npmjs.com/package/file-switch) 
+[![npm downloads](https://img.shields.io/npm/dm/file-switch.svg)](https://www.npmjs.com/package/file-switch) 
 
 
 ## <a name="purpose"></a>Purpose
@@ -62,7 +65,7 @@ new switchFile(options).useFile(isProd ? 'prod' : 'dev');
 ## <a name="api"></a>API
 
 ### `useFile(key)` → `path`
-Copies the source file with the given key to the destination path specified in the `options`, and returns the path of the file with the given key.
+Copies the source file with the given key to the destination path specified in the `options`, and returns the absolute path of the source file.
 
 
 ## <a name="config"></a>Configuration Options

@@ -6,8 +6,9 @@
   "main": "index.js",
   "scripts": {
     "lint": "jshint ./lib/ && eslint ./lib/ --fix",
-    "test": "npm run lint && npm run test-js",
-    "test-js": "nyc jasmine --config=./spec/support/jasmine.json"
+    "test": "npm run lint && npm run test-js && npm run coverage",
+    "test-js": "nyc jasmine --config=./spec/support/jasmine.json",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [
     "file",
