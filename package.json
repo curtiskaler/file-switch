@@ -35,6 +35,7 @@
     "lib/debug-helper.js",
     "lib/error-handler.js",
     "lib/file-copier.js",
+    "lib/file-type.js",
     "lib/logger.js",
     "lib/main.js",
     "lib/path-resolver.js"
